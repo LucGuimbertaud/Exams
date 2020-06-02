@@ -92,13 +92,13 @@ p {
   margin-top: 10px;
   font-size: 0.8em;
 }
-#contenu_gauche .bloc h3 {
+#contenu_gauche h3 {
   background: #fff;
   padding: 0.2em;
   text-align: center;
   margin-bottom: 0.5em;
 }
-#contenu_gauche .bloc .date {
+.date {
   color: #3b4ea1;
 }
 
