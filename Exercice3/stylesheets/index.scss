@@ -35,3 +35,162 @@ caption, th, td{
 	font-weight: normal; 
 	vertical-align: middle; 
 }
+
+q, blockquote {
+    quotes: none;
+}
+
+q:before, q:after, blockquote:before, blockquote:after {
+	content: "" ;
+    content: none; 
+}
+a {
+	text-decoration: none ;
+	color: #ae2123 ;
+	border: none; 
+	&:hover{
+        color: #999 ;
+    }
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary{
+    display: block ;
+}
+html{
+	font-size: 1.25em;
+    font-size: 1.25em;
+}
+body{
+	font-family: 'BenchNine', sans-serif;
+	font-size: 1rem;
+	line-height: 1.5rem; 
+    background: #ededed;
+}
+h1, .h1{
+    
+	font-size: 3rem;
+	line-height: 1.5rem; 
+	margin-top: 3rem;
+	margin-bottom: 1.5em; 
+}
+h2, .h2{
+	font-size: 2.4rem;
+	line-height: 1.5rem; 
+	margin-top: 1.5rem;
+    margin-bottom: 1.5rem; 
+}
+h3, .h3{
+	font-size: 1.35rem ;
+	line-height: 1.3rem ;
+	margin-top: 0.5em ;
+    margin-bottom: 1em;
+}
+p, ul, ol{
+	line-height: 1.5rem;
+	margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+ul ul, ol ol, ul ol, ol ul, .no-margin{
+	margin-top: 0em;
+    margin-bottom: 0em;
+}
+img{
+	max-width: 100%;
+}
+.wrapper{
+
+	width: 95%;
+	max-width: 1550px; 
+	margin: 0 auto ;
+    background: #fff; 
+}
+.header{ 
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	padding-top: 1.5rem ;
+}
+.header-title{
+	padding-right: 1rem; 
+    margin: 0 ;
+}
+.menu{
+	background: #543973 ;
+	margin: 0 ;
+	padding: 0 ;
+	display: flex ;
+	justify-content: center ;
+    border-radius: 1em ;
+}
+.menu-item {
+	list-style: none ;
+	a {
+		background: #3B2851 ;
+		padding: 10px 20px ;
+		margin: 1px 0px ;
+		display: block ;
+		text-decoration: none; 
+		color: white ;
+		&:hover {
+			background: #6d4a95; 
+            color: #d4c7e4 ;
+        }
+    }
+}
+main {
+	background: #fff ;
+    padding-top: 1.5rem; 
+}
+.row {
+	display: flex ;
+	justify-content: space-evenly; 
+    margin-top: 1.5rem ;
+}
+.article {
+    flex: 0 0 44%
+} 
+.bt{ 
+	display: inline-block ;
+	text-align: center ;
+	justify-content: center ;
+	vertical-align: middle ;
+	a {
+		color: #fff ;
+		display: block ;
+		background-color: #3B2851 ;
+		padding: .375rem .75rem ;
+		border-radius: .25rem ;
+		&:hover {
+			background: #6d4a95; 
+            color: #cccccc ;
+        }
+    }
+}
+.containerVignettes {
+	padding: 1.5rem ;
+    box-shadow: -1px -1px 20px 10px #ededed ;
+}
+.vignette {
+	position: relative ;
+	flex: 0 0 29% ;
+	&:hover {
+		.vignette-figcaption{
+            display: block ;
+        }
+    }
+}
+.vignette-figcaption {
+	position: absolute ;
+	bottom: 0 ;
+	left: 0 ;
+	right: 0 ;
+	background: rgba(255, 255, 255, 0.7) ;
+	display: none ;
+	columns: #ededed ;
+    padding: 1rem ;
+}
+.main-footer {
+	padding: 1rem ;
+	margin-top: 1.5rem ;
+	text-align: center ;
+	justify-content: center ;
+}
