@@ -22,7 +22,7 @@ p {
 }
 /*******************wrapper et header*****************/
 
-#wrapper {
+.wrapper {
   width: 990px;
   margin: 0 auto;
   background-color: #fff;
@@ -40,16 +40,16 @@ p {
 }
 
 /*********************menu****************************************/
-#menu_horizontal {
+.menu_horizontal {
   margin: 1em 0px 0px 0px;
   padding: 0px;
   text-align: center;
 }
-#menu_horizontal li {
+.menu_horizontal li {
   display: inline-block;
   list-style: none;
 }
-#menu_horizontal li a {
+.menu_horizontal li a {
   color: red;
   display: block;
   padding: 10px;
@@ -61,13 +61,13 @@ p {
   background-color: #ff0;
   border: thin solid orange;
 }
-#menu_horizontal a:hover {
+.menu_horizontal a:hover {
   background-color: #ff9900;
   color: black;
 }
 /*******contenu et colonnes********/
 
-#contenu {
+.contenu {
   display: flex;
   justify-content: space-between;
 }
@@ -78,8 +78,7 @@ p {
   background-color: #ff0;
 }
 
-#contenu_gauche,
-#contenu_droite {
+.side_contenu{
   width: 22%;
   margin: 10px;
   min-height: 500px;
@@ -108,7 +107,7 @@ p {
   float: right;
   margin: 0 0 10px 10px;
 }
-#vignettes {
+.vignettes {
   margin: 1em 0 0 0;
   padding: 0 1% 0 1%;
   text-align: center;
@@ -123,7 +122,7 @@ p {
 }
 
 /********************colonne droite*************************/
-#actualites {
+.actualites {
   height: 250px;
   border-radius: 10px;
   overflow: auto;
@@ -132,26 +131,26 @@ p {
   padding: 10px;
 }
 
-#actualites h2 {
+.actualites h2 {
   text-align: center;
 }
-#actualites .bloc {
+.actualites .bloc {
   border-bottom: 1px solid #ac9068;
 }
-#actualites .bloc h3 {
+.actualites .bloc h3 {
   font-weight: bold;
   font-size: 12px;
   font-weight: bold;
   margin: 0 0 3px 0;
 }
-#actualites .bloc span {
+.actualites .bloc span {
   color: #d48940;
   font-weight: bold;
 }
 
 /***********footer**********************/
 
-#footer {
+.footer {
   text-align: right;
   padding: 10px;
   font-size: 10px;
