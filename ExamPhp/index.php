@@ -1,5 +1,3 @@
-<?php require('process/db_connect.php') ?>
-
 <!DOCTYPE html>
 <html>
 
@@ -8,26 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
     <main>
-        <?php
-                $request = $db->prepare('SELECT nom FROM Ecoles');
-                $request->execute();           
-                while($row = $request->fetch()){
-                    ?>
-        <div>
-            <h3>
-                <?php
-                              print($row[0])  
-                            ?>
-            </h3>
-        </div>
-        <?php        
-                }    
-            ?>
+        <?php require('contents/ecolesList.php') ?>
+        <form id="add_data">
+            <input type="submit" value="Ajout de fake Data" id="submit"> 
+        </form>
     </main>
 </body>
 
 </html>
+
+
+
+
+<script>
+$(function(){
+    $('#submit').click(function(){
+        $.ajax({
+            url: './process/add_random_data.php',
+            type: 'POST',
+            success: function(data) { 
+                /* alert("Données Ajoutés"); */
+            },
+            error: function() {
+                /* alert("Error!"); */
+            }
+        });
+    });
+});
+</script>

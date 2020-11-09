@@ -3,3 +3,21 @@ body{
     margin: auto;
     text-align: center;
 }
+
+.row:first-child{
+    margin-top: 60px;
+}
+
+.row{
+    width: 20em;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row h3{
+    font-size: large;
+    font-weight: 800;
+}
