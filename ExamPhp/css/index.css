@@ -20,4 +20,9 @@ body{
 .row h3{
     font-size: large;
     font-weight: 800;
+    width: 10em;
+}
+
+.row p{
+    width: 10em;
 }

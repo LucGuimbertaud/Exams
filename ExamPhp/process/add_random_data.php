@@ -8,7 +8,7 @@ $elevesEcole3 = random_int(200, 800);
 
 
 /* Reset Eleves table */
-$sql = "DELETE FROM Eleves";
+$sql = "TRUNCATE TABLE Eleves";
 $send = $db->prepare($sql);
 $send->execute(); 
 
@@ -34,4 +34,25 @@ $sql = "UPDATE Ecoles SET nbEleves = (case  when id = 1 then $elevesEcole1
                                         end)";
 $send = $db->prepare($sql);
 $send->execute(); 
+/* Get number of student who are doing sport and inject in Ecoles*/
+for ($i=0; $i<3; $i++){
+    $sql = "SELECT COUNT(*) FROM Eleves WHERE ecole_Id = ($i+1) & sport_Id != 0";
+    $request = $db->prepare($sql);
+    $request->execute();
+    $row = $request->fetch();
+    $nb_eleves_sportif = $row[0];
+
+    if($i==0){
+        $sql = "UPDATE Ecoles SET nb_Eleves_Sportif = $nb_eleves_sportif WHERE id = 1";
+    }
+    if($i==1){
+        $sql = "UPDATE Ecoles SET nb_Eleves_Sportif = $nb_eleves_sportif WHERE id = 2";
+    }
+    if($i==2){
+        $sql = "UPDATE Ecoles SET nb_Eleves_Sportif = $nb_eleves_sportif WHERE id = 3";
+    }
+    
+    $send = $db->prepare($sql);
+    $send->execute(); 
+}
 ?>
